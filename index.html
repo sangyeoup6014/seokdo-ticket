@@ -30,15 +30,14 @@
       border-radius: 14px;
       padding: 20px;
       text-align: center;
-      cursor: pointer;
-      transition: 0.2s;
       font-weight: bold;
+      cursor: default;
     }
-    .product:hover { transform: translateY(-4px); box-shadow: 0 10px 22px rgba(0,0,0,0.12); }
     .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
     .step { background: #f1f3f4; padding: 18px; border-radius: 10px; text-align: center; font-weight: 500; white-space: pre-line; }
     .footer { font-size: 13px; color: #777; text-align: center; margin: 40px 0 20px; }
     .price { font-weight: normal; color: #d93025; margin-top: 5px; }
+    strong.highlight { color: #d93025; }
   </style>
 </head>
 
@@ -52,19 +51,19 @@
     <p>정해진 기한 내 발송 · 안전한 거래 운영</p>
   </div>
 
-  <!-- 상품권 카드 (사진 없음, 클릭 시 카톡 상담) -->
+  <!-- 상품권 카드 -->
   <div class="card">
     <h2>상품권 선택</h2>
     <div class="products">
-      <div class="product" onclick="location.href='https://open.kakao.com/me/seokdo12';">
+      <div class="product">
         <h3>신세계상품권</h3>
         <p class="price">매입가 66.7% ~ 70%</p>
       </div>
-      <div class="product" onclick="location.href='https://open.kakao.com/me/seokdo12';">
+      <div class="product">
         <h3>롯데상품권</h3>
         <p class="price">매입가 66.7% ~ 70%</p>
       </div>
-      <div class="product" onclick="location.href='https://open.kakao.com/me/seokdo12';">
+      <div class="product">
         <h3>기프티콘</h3>
         <p class="price">매입가 상시 변동</p>
       </div>
@@ -74,14 +73,21 @@
   <!-- 거래절차 -->
   <div class="card">
     <h2>거래 절차</h2>
+    <p><strong class="highlight">예약판매 후 상품권 발송 기간: 결제 확인 후 5일 ~ 30일 이내</strong></p>
     <div class="steps">
-      <div class="step">STEP 1
-예약 신청 및 결제</div>
-      <div class="step">STEP 2
-결제 확인</div>
-      <div class="step">STEP 3
-기한 내 모바일 상품권 발송
-SSG 선물하기 가능</div>
+      <div class="step">
+        STEP 1
+        <br>예약판매 신청
+      </div>
+      <div class="step">
+        STEP 2
+        <br>계약서 작성 및 판매대금 선입금
+      </div>
+      <div class="step">
+        STEP 3
+        <br>계약 내용에 따라 상품권 발송
+        <br>SSG 선물하기 가능
+      </div>
     </div>
   </div>
 
@@ -96,7 +102,7 @@ SSG 선물하기 가능</div>
         액면가 300,000원 / 매입가 200,000원<br>
         미발송 시 지급 = 200,000 + 200,000 = <strong>총 400,000원</strong>
       </li>
-      <li>미발송 또는 고의 지연 시 민사상 손해배상 청구 및 형사 고소 가능</li>
+      <li>계약서대로 미발송 시 민사상 손해배상 청구 및 형사 고소 가능</li>
       <li>전자상거래법 등 관련 법령 준수</li>
     </ul>
   </div>
@@ -108,7 +114,7 @@ SSG 선물하기 가능</div>
       상호명: 석도티켓<br>
       사업자등록번호: 320-90-02387<br>
       연락처: 010-3106-6014<br>
-      카카오톡 상담 ID: <strong>seokdo12</strong>
+      카톡 상담: <strong>seokdo12</strong>
     </p>
   </div>
 
