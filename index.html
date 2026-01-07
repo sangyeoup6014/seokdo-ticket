@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>석도티켓 | 상품권 예약판매</title>
-
   <style>
     body {
       margin: 0;
@@ -12,11 +11,7 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       color: #222;
     }
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 20px;
-    }
+    .container { max-width: 960px; margin: 0 auto; padding: 20px; }
     .card {
       background: #fff;
       border-radius: 14px;
@@ -27,21 +22,9 @@
     h1 { font-size: 30px; margin-bottom: 10px; }
     h2 { font-size: 22px; margin-bottom: 15px; }
     p, li { line-height: 1.7; }
-
-    .hero {
-      text-align: center;
-      padding: 45px 20px;
-    }
-    .hero strong {
-      color: #1a73e8;
-      font-size: 18px;
-    }
-
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-    }
+    .hero { text-align: center; padding: 45px 20px; }
+    .hero strong { color: #1a73e8; font-size: 18px; }
+    .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
     .product {
       border: 1px solid #e0e0e0;
       border-radius: 14px;
@@ -50,41 +33,11 @@
       cursor: pointer;
       transition: 0.2s;
     }
-    .product:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 22px rgba(0,0,0,0.12);
-    }
-    .product img {
-      width: 100%;
-      max-height: 160px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
-    .price {
-      font-weight: bold;
-      color: #d93025;
-    }
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-    }
-    .step {
-      background: #f1f3f4;
-      padding: 18px;
-      border-radius: 10px;
-      text-align: center;
-      font-weight: 500;
-    }
-
-    .footer {
-      font-size: 13px;
-      color: #777;
-      text-align: center;
-      margin: 40px 0 20px;
-    }
+    .product:hover { transform: translateY(-4px); box-shadow: 0 10px 22px rgba(0,0,0,0.12); }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+    .step { background: #f1f3f4; padding: 18px; border-radius: 10px; text-align: center; font-weight: 500; }
+    .footer { font-size: 13px; color: #777; text-align: center; margin: 40px 0 20px; }
+    .price { font-weight: bold; color: #d93025; }
   </style>
 </head>
 
@@ -98,22 +51,19 @@
     <p>정해진 기한 내 발송 · 안전한 거래 운영</p>
   </div>
 
-  <!-- 상품권 -->
+  <!-- 상품권 카드 (사진 제거, 클릭만 가능) -->
   <div class="card">
-    <h2>취급 상품권 및 매입가</h2>
+    <h2>상품권 선택</h2>
     <div class="products">
       <div class="product" onclick="location.href='https://open.kakao.com/me/seokdo12';">
-        <img src="https://i.imgur.com/NT7Jf4A.jpg" alt="신세계상품권">
         <h3>신세계상품권</h3>
         <p class="price">매입가 66.7% ~ 70%</p>
       </div>
       <div class="product" onclick="location.href='https://open.kakao.com/me/seokdo12';">
-        <img src="https://i.imgur.com/Ov7sRZb.jpg" alt="롯데상품권">
         <h3>롯데상품권</h3>
         <p class="price">매입가 66.7% ~ 70%</p>
       </div>
       <div class="product" onclick="location.href='https://open.kakao.com/me/seokdo12';">
-        <img src="https://i.imgur.com/7pF0M3B.png" alt="기프티콘">
         <h3>기프티콘</h3>
         <p class="price">매입가 상시 변동</p>
       </div>
@@ -126,7 +76,7 @@
     <div class="steps">
       <div class="step">STEP 1<br>예약 신청 및 결제</div>
       <div class="step">STEP 2<br>결제 확인</div>
-      <div class="step">STEP 3<br>기한 내 모바일 상품권 발송</div>
+      <div class="step">STEP 3<br>기한 내 모바일 상품권 발송 / SSG 선물하기 가능</div>
     </div>
   </div>
 
@@ -134,16 +84,15 @@
   <div class="card">
     <h2>미발송 시 책임 및 위약금</h2>
     <ul>
-      <li>약정 기한 내 상품권 미발송 시 위약금이 발생합니다.</li>
-      <li><strong>위약금 기준:</strong> 판매대금 + 판매대금의 100%</li>
+      <li>약정 기한 내 상품권 미발송 시 위약금 발생</li>
+      <li><strong>위약금 기준:</strong> 판매대금 + 판매대금 100%</li>
       <li>
-        <strong>예시</strong><br>
+        <strong>예시:</strong><br>
         액면가 300,000원 / 매입가 200,000원<br>
-        미발송 시 지급 금액 = 200,000원 + 200,000원<br>
-        <strong>총 400,000원</strong>
+        미발송 시 지급 = 200,000 + 200,000 = <strong>총 400,000원</strong>
       </li>
-      <li>미발송 또는 고의적 지연 시 민사상 손해배상 청구 및 형사 고소가 진행될 수 있습니다.</li>
-      <li>본 내용은 전자상거래법 등 관련 법령에 따릅니다.</li>
+      <li>미발송 또는 고의 지연 시 민사상 손해배상 청구 및 형사 고소 가능</li>
+      <li>전자상거래법 등 관련 법령 준수</li>
     </ul>
   </div>
 
