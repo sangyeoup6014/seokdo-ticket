@@ -3,56 +3,166 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>상품권 예약판매 | 석도티켓</title>
+  <title>석도티켓 | 상품권 예약판매</title>
+
   <style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background: #f5f5f5;
       margin: 0;
-      padding: 0;
+      background: #f4f6f8;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: #222;
     }
     .container {
-      max-width: 720px;
-      margin: 40px auto;
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
     }
-    h1 { font-size: 24px; margin-bottom: 10px; }
-    h2 { font-size: 18px; margin-top: 30px; }
-    p, li { line-height: 1.6; color: #333; }
-    ul { padding-left: 20px; }
-    .footer { margin-top: 40px; font-size: 13px; color: #777; }
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 25px;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+    h1 { font-size: 30px; margin-bottom: 10px; }
+    h2 { font-size: 22px; margin-bottom: 15px; }
+    p, li { line-height: 1.7; }
+
+    .hero {
+      text-align: center;
+      padding: 45px 20px;
+    }
+    .hero strong {
+      color: #1a73e8;
+      font-size: 18px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .product {
+      border: 1px solid #e0e0e0;
+      border-radius: 14px;
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .product:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+    }
+    .product img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .price {
+      font-weight: bold;
+      color: #d93025;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+    .step {
+      background: #f1f3f4;
+      padding: 18px;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .footer {
+      font-size: 13px;
+      color: #777;
+      text-align: center;
+      margin: 40px 0 20px;
+    }
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <h1>상품권 예약판매 안내</h1>
+<div class="container">
 
-    <h2>사업자 정보</h2>
-    <p>
-      상호명: 석도티켓<br />
-      사업자등록번호: 320-90-02387<br />
-      연락처: 010-3106-6014
-    </p>
+  <!-- 상단 -->
+  <div class="card hero">
+    <h1>석도티켓</h1>
+    <p><strong>모바일 상품권 예약판매 전문</strong></p>
+    <p>정해진 기한 내 발송 · 안전한 거래 운영</p>
+  </div>
 
-    <h2>판매 방식</h2>
-    <ul>
-      <li>고객이 상품권 예약 신청 및 결제</li>
-      <li>결제 확인 후 약정된 기한 내 모바일 상품권 발송</li>
-      <li>발송 방식: 카카오톡 선물하기 / SSG 선물하기 등</li>
-    </ul>
+  <!-- 상품권 -->
+  <div class="card">
+    <h2>취급 상품권 및 매입가</h2>
 
-    <h2>구매안전 서비스</h2>
-    <p>
-      본 판매는 구매자의 안전한 거래를 위해
-      <strong>구매안전서비스(에스크로)</strong> 또는 이에 준하는 방식으로 운영됩니다.
-    </p>
+    <div class="products">
+      <div class="product" onclick="location.href='https://open.kakao.com/o/someLink';">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Shinsegae_Department_Store_logo.svg">
+        <h3>신세계상품권</h3>
+        <p class="price">매입가 66.7% ~ 70%</p>
+      </div>
 
-    <div class="footer">
-      © 2026 석도티켓. All rights reserved.
+      <div class="product" onclick="location.href='https://open.kakao.com/o/someLink';">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Lotte_logo.svg">
+        <h3>롯데상품권</h3>
+        <p class="price">매입가 66.7% ~ 70%</p>
+      </div>
+
+      <div class="product" onclick="location.href='https://open.kakao.com/o/someLink';">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Gift_icon.svg">
+        <h3>기프티콘</h3>
+        <p class="price">매입가 상시 변동</p>
+      </div>
     </div>
   </div>
+
+  <!-- 거래절차 -->
+  <div class="card">
+    <h2>거래 절차</h2>
+    <div class="steps">
+      <div class="step">STEP 1<br>예약 신청 및 결제</div>
+      <div class="step">STEP 2<br>결제 확인</div>
+      <div class="step">STEP 3<br>기한 내 모바일 상품권 발송</div>
+    </div>
+  </div>
+
+  <!-- 위약금 -->
+  <div class="card">
+    <h2>미발송 시 책임 및 위약금</h2>
+    <ul>
+      <li>약정 기한 내 상품권 미발송 시 위약금이 발생합니다.</li>
+      <li><strong>위약금 기준:</strong> 판매대금 + 판매대금의 100%</li>
+      <li>
+        <strong>예시</strong><br>
+        액면가 300,000원 / 매입가 200,000원<br>
+        미발송 시 지급 금액 = 200,000원 + 200,000원<br>
+        <strong>총 400,000원</strong>
+      </li>
+      <li>미발송 또는 고의적 지연 시 민사상 손해배상 청구 및 형사 고소가 진행될 수 있습니다.</li>
+      <li>본 내용은 전자상거래법 등 관련 법령에 따릅니다.</li>
+    </ul>
+  </div>
+
+  <!-- 사업자 정보 (맨 아래) -->
+  <div class="card">
+    <h2>사업자 정보</h2>
+    <p>
+      상호명: 석도티켓<br>
+      사업자등록번호: 320-90-02387<br>
+      연락처: 010-3106-6014<br>
+      카카오톡 상담 ID: <strong>seokdo12</strong>
+    </p>
+  </div>
+
+  <div class="footer">
+    © 2026 석도티켓. All rights reserved.
+  </div>
+
+</div>
 </body>
 </html>
